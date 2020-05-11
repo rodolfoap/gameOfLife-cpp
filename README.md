@@ -17,3 +17,6 @@ make
 cd ..
 ./gameoflife [SOME_FILE.matrix]
 ```
+## Example output
+
+![](golife-ncurses.gif)
