@@ -26,7 +26,7 @@ case "$1" in
 		debug
 	;;
 	e)
-		vi -p gameoflife.cpp CMakeLists.txt
+		vi -p gameoflife.cpp functions.cpp CMakeLists.txt
 		rm -f gameoflife
 		build;
 		execute;
