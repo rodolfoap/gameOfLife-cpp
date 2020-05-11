@@ -20,4 +20,5 @@ set(CMAKE_C_FLAGS "-g")
 
 add_executable(gameoflife gameoflife.cpp)
 
-target_link_libraries(gameoflife ncurses)
+# Equivalent to (CLIBS) -lm
+target_link_libraries(gameoflife m)
