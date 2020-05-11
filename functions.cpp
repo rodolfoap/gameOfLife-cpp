@@ -1,7 +1,6 @@
 void initncurses() {
 	initscr(); // mandatory
         noecho(); // avoid echo
-        attron(A_REVERSE); // Reverse
         curs_set(0); // hides cursor
         use_default_colors(); // ncurses has horrible colors, this uses the users' default... more or less.
         init_pair(1, COLOR_GREEN, COLOR_BLACK); // id, foreground, background
