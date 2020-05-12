@@ -1,10 +1,11 @@
-#include <iostream>
 #include <fstream>
 #include <string.h>
 #include <unistd.h>
-#include <ncurses.h>
-#include "functions.cpp"
 #define B(p, q)(b[y+p][x+q]=='#')
+
+void setdot(int y, int x, int v);
+void updatescreen();
+void initscreen();
 
 int main(int n, char**v) {
 	int col=0, row=0;
@@ -12,15 +13,15 @@ int main(int n, char**v) {
 	std::ifstream f(v[1]);
 	while(f>>b[row++]);
 	col=strlen(b[0]);
-	initncurses();
+	initscreen();
 
 	while(1) {
 		// Calculate neighbors number and print actual state
 		int i[128][256]{0};
 		for(int y=0; y<row; ++y) { for(int x=0; x<col; ++x) {
 			i[y][x]=B(-1,-1)+B(-1,0)+B(-1,1)+B(0,-1)+B(0,1)+B(1,-1)+B(1,0)+B(1,1);
-			dot(y, x, b[y][x]=='#'?1:0);
-		}} refresh();
+			setdot(y, x, b[y][x]=='#'?1:0);
+		}} updatescreen();
 
 		// Apply rules over neighbors number
 		for(int y=0; y<row; ++y) { for(int x=0; x<col; ++x) {

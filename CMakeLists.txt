@@ -18,6 +18,6 @@ execute_process(COMMAND sed "s/^/\t/" CMakeLists.txt
 # Equivalent to (CFLAGS) -g
 set(CMAKE_C_FLAGS "-g")
 
-add_executable(gameoflife gameoflife.cpp)
-
-target_link_libraries(gameoflife ncurses)
+add_executable(gameoflife-text gameoflife.cpp plaintext.cpp)
+add_executable(gameoflife-ncurses gameoflife.cpp ncurses.cpp)
+target_link_libraries(gameoflife-ncurses ncurses)
