@@ -1,5 +1,6 @@
 execute(){
-	./gameoflife-sfml	patterns/glidergun.matrix
+	./gameoflife		patterns/glidergun.matrix
+	#/gameoflife-sfml	patterns/glidergun.matrix
 	#/gameoflife-ncurses	patterns/glidergun.matrix
 	#/gameoflife-text	patterns/glidergun.matrix
 }
@@ -25,7 +26,9 @@ case "$1" in
 		build
 	;;
 	e)
-		vi -p src/controller.cpp include/model.hpp src/view-sfml.cpp src/view-ncurses.cpp src/view-text.cpp CMakeLists.txt
+		vi -p 	src/{controller,model,small,view-ncurses,view-sfml,view-text}.cpp \
+			include/{model,view}.hpp \
+			CMakeLists.txt
 		rm -f gameoflife-*
 		build;
 		execute;

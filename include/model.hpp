@@ -1,8 +1,5 @@
-#include <iostream>
 #include <fstream>
 #include <string.h>
-#include <unistd.h>
-#define B(p, q)(b[y+p][x+q]=='#')
 
 class GameOfLife{
 private:
