@@ -1,5 +1,6 @@
 execute(){
-	./gameoflife r-pentomino.matrix
+	./gameoflife-ncurses glidergun.matrix
+	#/gameoflife-text glidergun.matrix
 }
 debug(){
 	nemiver gameoflife
