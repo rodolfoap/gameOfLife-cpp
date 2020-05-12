@@ -27,16 +27,16 @@ Check the format of any `.matrix` file. Matrix files are the initial setup to ru
 ```
 ## Example output
 
-![](golife-ncurses.gif)
+![](img/golife-ncurses.gif)
 
 ### Plain Text
 
-![](plaintext.png)
+![](img/plaintext.png)
 
 ### NCURSES
 
-![](ncurses.png)
+![](img/ncurses.png)
 
 ### SFML
 
-![](sfml.png)
+![](img/sfml.png)

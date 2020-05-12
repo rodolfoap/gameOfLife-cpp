@@ -25,7 +25,7 @@ case "$1" in
 		build
 	;;
 	e)
-		vi -p controller.cpp model.hpp view-sfml.cpp view-ncurses.cpp view-text.cpp CMakeLists.txt
+		vi -p src/controller.cpp include/model.hpp src/view-sfml.cpp src/view-ncurses.cpp src/view-text.cpp CMakeLists.txt
 		rm -f gameoflife-*
 		build;
 		execute;

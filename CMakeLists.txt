@@ -18,10 +18,11 @@ execute_process(COMMAND sed "s/^/\t/" CMakeLists.txt
 # Equivalent to (CFLAGS) -g
 set(CMAKE_C_FLAGS "-g")
 
-add_executable(gameoflife-text controller.cpp view-text.cpp)
+include_directories(include)
+add_executable(gameoflife-text src/controller.cpp src/view-text.cpp)
 
-add_executable(gameoflife-ncurses controller.cpp view-ncurses.cpp)
+add_executable(gameoflife-ncurses src/controller.cpp src/view-ncurses.cpp)
 target_link_libraries(gameoflife-ncurses ncurses)
 
-add_executable(gameoflife-sfml controller.cpp view-sfml.cpp)
+add_executable(gameoflife-sfml src/controller.cpp src/view-sfml.cpp)
 target_link_libraries(gameoflife-sfml sfml-graphics sfml-window sfml-system)
