@@ -1,29 +1,27 @@
+#include <iostream>
 #include <fstream>
 #include <string.h>
 #include <unistd.h>
 #define B(p, q)(b[y+p][x+q]=='#')
 
-void setdot(int y, int x, int v);
-void updatescreen();
-void initscreen();
-
-int main(int n, char**v) {
+class GameOfLife{
+public:
 	int col=0, row=0;
 	char b[128][256];
-	std::ifstream f(v[1]);
-	while(f>>b[row++]);
-	col=strlen(b[0]);
-	initscreen();
-
-	while(1) {
-		// Calculate neighbors number and print actual state
-		int i[128][256]{0};
+	int i[128][256]{0};
+	GameOfLife(char* v){
+		std::ifstream f(v);
+		while(f>>b[row++]);
+		col=strlen(b[0]);
+	}
+	void calculate_i(){
+		memset(i, 0, sizeof(i));
 		for(int y=0; y<row; ++y) { for(int x=0; x<col; ++x) {
 			i[y][x]=B(-1,-1)+B(-1,0)+B(-1,1)+B(0,-1)+B(0,1)+B(1,-1)+B(1,0)+B(1,1);
 			setdot(y, x, b[y][x]=='#'?1:0);
-		}} updatescreen();
-
-		// Apply rules over neighbors number
+		}}
+	}
+	void calculate_b(){
 		for(int y=0; y<row; ++y) { for(int x=0; x<col; ++x) {
 			// Apply life rules
 			switch(i[y][x]) {
@@ -31,6 +29,6 @@ int main(int n, char**v) {
 				case 2: break;
 				default: b[y][x]='.';
 			}
-		} } usleep(200000);
+		}}
 	}
-}
+};
