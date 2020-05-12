@@ -1,7 +1,7 @@
 execute(){
-	./gameoflife-sfml glidergun.matrix
-	#/gameoflife-ncurses glidergun.matrix
-	#/gameoflife-text glidergun.matrix
+	./gameoflife-sfml	matrix/glidergun.matrix
+	#/gameoflife-ncurses	matrix/glidergun.matrix
+	#/gameoflife-text	matrix/glidergun.matrix
 }
 build(){
 	[ -d build/ ] && {
