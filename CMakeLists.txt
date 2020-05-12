@@ -26,3 +26,6 @@ target_link_libraries(gameoflife-ncurses ncurses)
 
 add_executable(gameoflife-sfml src/controller.cpp src/model.cpp src/view-sfml.cpp)
 target_link_libraries(gameoflife-sfml sfml-graphics sfml-window sfml-system)
+
+# The original: smallest but functional version. No dependencies.
+add_executable(gameoflife src/small.cpp)

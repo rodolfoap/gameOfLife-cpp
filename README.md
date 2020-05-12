@@ -1,7 +1,7 @@
 # Game Of Life - C++
 
 * Game of Life [1]. In C++. Just for fun.
-* Simplified as much as possible, the original (and functional) commit was ~700 chars of code.
+* Simplified as much as possible, the original (and functional) version (see `src/small.cpp`) has ~700 chars of code.
 * Learning new tricks!
 * Using CMake to make an elementary dependency injection. See the CMake `add_executable()` dependency injection mechanism. With this, the application is focused on the controller (`gameoflife.cpp`), while the CMake dependency-injection implements the selection of the view layer.
 
