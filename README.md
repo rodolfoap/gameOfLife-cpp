@@ -15,8 +15,22 @@ cd build
 cmake ..
 make
 cd ..
-./gameoflife [SOME_FILE.matrix]
+./gameoflife-text    [SOME_FILE.matrix] # plain text
+./gameoflife-ncurses [SOME_FILE.matrix] # ncurses
+./gameoflife-sfml    [SOME_FILE.matrix] # sfml window
 ```
 ## Example output
 
 ![](golife-ncurses.gif)
+
+### Plain Text
+
+![](plaintext.png)
+
+### NCURSES
+
+![](ncurses.png)
+
+### SFML
+
+![](sfml.png)
