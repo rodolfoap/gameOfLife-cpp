@@ -4,6 +4,7 @@
 * Simplified as much as possible, the original (and functional) version (see `standalone/golife.cpp`) has 665 chars.
 * Using CMake to make an elementary dependency injection. See the CMake `add_executable()` dependency injection mechanism.
 * Following a comment from [danielyerena6](https://github.com/danielyerena6), moved to an _MVC_ (model-view-controller) pattern. The model implements the game, the controller implements the evolution of the game, and the view controls the display mechanism, selected by means of dependency injection.
+* Patterns taken from http://www.radicaleye.com/lifepage/glossary.html
 
 [1] https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
 
