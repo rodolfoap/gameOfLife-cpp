@@ -14,7 +14,7 @@ build(){
 	}
 	make -j8; STATUS=$?
 	popd &> /dev/null;
-	[ $STATUS == 0 ] && echo [100%] Generated binaries: $(ls gameoflife-*) || echo [ERROR] Compilation error.
+	[ $STATUS == 0 ] && echo [100%] Generated binaries: $(ls gameoflife*) || echo [ERROR] Compilation error.
 }
 case "$1" in
 	"")

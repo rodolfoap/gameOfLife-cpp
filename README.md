@@ -1,10 +1,9 @@
 # Game Of Life - C++
 
-* Game of Life [1]. In C++. Just for fun.
-* Simplified as much as possible, the original (and functional) version (see `src/small.cpp`) has ~700 chars of code.
-* Learning new tricks!
-* Using CMake to make an elementary dependency injection. See the CMake `add_executable()` dependency injection mechanism. With this, the application is focused on the controller (`gameoflife.cpp`), while the CMake dependency-injection implements the selection of the view layer.
-* Following a comment from [danielyerena6](https://github.com/danielyerena6), moved to an _MVC_ (model-view-controller) pattern. The model implements the game, the controller implements the evolution of the game, and the view controls the display mechanism, as described previously, via _dependency injection_.
+* Game of Life [1]. In C++. Just for fun & learning new tricks!
+* Simplified as much as possible, the original (and functional) version (see `standalone/golife.cpp`) has 665 chars.
+* Using CMake to make an elementary dependency injection. See the CMake `add_executable()` dependency injection mechanism.
+* Following a comment from [danielyerena6](https://github.com/danielyerena6), moved to an _MVC_ (model-view-controller) pattern. The model implements the game, the controller implements the evolution of the game, and the view controls the display mechanism, selected by means of dependency injection.
 
 [1] https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
 
@@ -34,7 +33,7 @@ Check the format of any `.matrix` file. Matrix files are the initial setup to ru
 
 ![](img/plaintext.png)
 
-### NCURSES
+### Ncurses
 
 ![](img/ncurses.png)
 

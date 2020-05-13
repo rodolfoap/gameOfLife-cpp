@@ -18,6 +18,11 @@ execute_process(COMMAND sed "s/^/\t/" CMakeLists.txt
 # Equivalent to (CFLAGS) -g
 set(CMAKE_C_FLAGS "-g")
 
+# The original: smallest but functional version. No dependencies, no headers.
+add_executable(gameoflife standalone/golife.cpp)
+
+# With dependency Injection:
+
 include_directories(include)
 add_executable(gameoflife-text src/controller.cpp src/model.cpp src/view-text.cpp)
 
@@ -26,6 +31,3 @@ target_link_libraries(gameoflife-ncurses ncurses)
 
 add_executable(gameoflife-sfml src/controller.cpp src/model.cpp src/view-sfml.cpp)
 target_link_libraries(gameoflife-sfml sfml-graphics sfml-window sfml-system)
-
-# The original: smallest but functional version. No dependencies.
-add_executable(gameoflife src/small.cpp)
