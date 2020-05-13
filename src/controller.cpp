@@ -9,6 +9,6 @@ int main(int n, char**v) {
 		game.calculate_i();
 		updatescreen();
 		game.calculate_b();
-		usleep(200000);
+		usleep(100000);
 	}
 }

@@ -1,6 +1,6 @@
 #include<SFML/Graphics.hpp>
 
-sf::RenderWindow window(sf::VideoMode(800, 600), "SFML window");
+sf::RenderWindow window(sf::VideoMode(2560, 1080), "SFML window");
 sf::CircleShape dot(4);
 
 void initscreen() {
